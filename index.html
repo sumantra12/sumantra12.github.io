@@ -33,39 +33,39 @@
 				</header>
 				
 				<p id="demo"></p>
-		     <center>
-			<script>
-
-				var countDownDate = new Date("May 14, 2021 11:59:59").getTime();
-
-
-				var x = setInterval(function() {
-
- 
-  				var now = new Date().getTime();
-
-
- 				var distance = countDownDate - now;
-
-  
-  				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-			        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
- 			        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
- 			        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  
-  				document.getElementById("demo").innerHTML = days + "d " + hours + "h "
- 				 + minutes + "m " + seconds + "s ";
-
-  
- 			 if (distance < 0) {
-   			 clearInterval(x);
-   			 document.getElementById("demo").innerHTML = "APPLICATIONS HAVE NOW CLOSED";
- 			 }
-			}, 1000);
 				
-		</script>
-		</center>
+				<script>
+				
+				function countdownTimer() {
+ 				 const difference = +new Date("2021-05-21") - +new Date();
+  				let remaining = "Time's up!";
+
+  			if (difference > 0) {
+  				  const parts = {
+     			 days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+     			 hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      			minutes: Math.floor((difference / 1000 / 60) % 60),
+      			seconds: Math.floor((difference / 1000) % 60),
+    			};
+    			remaining = Object.keys(parts).map(part => {
+   		 return `${parts[part]} ${part}`;
+   		 }).join(" ");
+ 		 }
+					
+		
+
+		  document.getElementById("countdown").innerHTML = remaining;
+		}
+					
+		countDownTimer();
+					
+				</script>
+				
+				
+				
+
+
+		
 				
 				 
 				
