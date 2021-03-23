@@ -88,6 +88,14 @@ input, select, textarea {
 
 	body {
 		background: #ffffff;
+		.container {
+    			text-align: center;
+		}
+
+		.flip-clock {
+   			 display: inline-block;
+    			width: auto;
+			}
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
